@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
-
+   <children>
+      <TableView prefHeight="419.0" prefWidth="640.0">
+        <columns>
+          <TableColumn fx:id="mozinevCol" prefWidth="118.0" text="Mozinév" />
+          <TableColumn fx:id="mozicimCol" minWidth="0.0" prefWidth="131.0" text="Mozi cím" />
+            <TableColumn fx:id="filmcimCol" prefWidth="127.0" text="Filmcím" />
+            <TableColumn fx:id="szarmazasCol" prefWidth="112.0" text="Származás" />
+            <TableColumn fx:id="mufajCol" prefWidth="82.0" text="Műfaj" />
+            <TableColumn fx:id="filmhosszCol" prefWidth="69.0" text="Filmhossz" />
+        </columns>
+      </TableView>
+   </children>
 </VBox>
