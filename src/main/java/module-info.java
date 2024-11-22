@@ -2,6 +2,7 @@ module org.example.demo {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.logging;
+    requires java.sql;
 
 
     opens org.example.demo to javafx.fxml;

@@ -26,8 +26,8 @@
             <CheckBox layoutX="38.0" layoutY="242.0" mnemonicParsing="false" text="fantasy" />
             <CheckBox layoutX="38.0" layoutY="267.0" mnemonicParsing="false" text="vígjáték" />
             <Label layoutX="38.0" layoutY="300.0" prefHeight="17.0" prefWidth="76.0" text="Filmhossz" />
-            <RadioButton layoutX="38.0" layoutY="324.0" mnemonicParsing="false" text="kevesebb mint 1 óra" />
-            <RadioButton layoutX="38.0" layoutY="349.0" mnemonicParsing="false" text="több mint 1 óra" />
+            <RadioButton layoutX="38.0" layoutY="324.0" mnemonicParsing="false" text="kevesebb mint 2 óra" />
+            <RadioButton layoutX="38.0" layoutY="349.0" mnemonicParsing="false" text="több mint 2 óra" />
             <Button layoutX="221.0" layoutY="354.0" mnemonicParsing="false" text="Keresés" />
          </children>
       </AnchorPane>

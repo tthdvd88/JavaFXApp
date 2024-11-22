@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.Read1Controller">
    <children>
-      <TableView prefHeight="419.0" prefWidth="640.0">
+      <TableView fx:id="tvAll" prefHeight="419.0" prefWidth="640.0">
         <columns>
           <TableColumn fx:id="mozinevCol" prefWidth="118.0" text="Mozinév" />
-          <TableColumn fx:id="mozicimCol" minWidth="0.0" prefWidth="131.0" text="Mozi cím" />
-            <TableColumn fx:id="filmcimCol" prefWidth="127.0" text="Filmcím" />
-            <TableColumn fx:id="szarmazasCol" prefWidth="112.0" text="Származás" />
-            <TableColumn fx:id="mufajCol" prefWidth="82.0" text="Műfaj" />
-            <TableColumn fx:id="filmhosszCol" prefWidth="69.0" text="Filmhossz" />
+          <TableColumn fx:id="irszamCol" minWidth="0.0" prefWidth="131.0" text="Mozi irányítószám" />
+            <TableColumn fx:id="filmcimCol" prefWidth="95.0" text="Filmcím" />
+            <TableColumn fx:id="szarmazasCol" prefWidth="79.0" text="Származás" />
+            <TableColumn fx:id="mufajCol" prefWidth="102.0" text="Műfaj" />
+            <TableColumn fx:id="filmhosszCol" prefWidth="74.0" text="Filmhossz" />
         </columns>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
       </TableView>
    </children>
 </VBox>
