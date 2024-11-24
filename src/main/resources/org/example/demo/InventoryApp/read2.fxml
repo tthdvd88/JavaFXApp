@@ -3,32 +3,34 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.Read2Controller">
    <children>
-      <AnchorPane layoutX="310.0" layoutY="-1.0" prefHeight="400.0" prefWidth="300.0">
+      <AnchorPane layoutX="215.0" prefHeight="600.0" prefWidth="555.0">
          <children>
-            <TableView layoutX="-14.0" layoutY="7.0" prefHeight="387.0" prefWidth="300.0">
+            <TableView fx:id="tvRead2" layoutX="7.0" layoutY="7.0" prefHeight="576.0" prefWidth="573.0">
               <columns>
-                <TableColumn prefWidth="144.0" text="Mozinév" />
-                <TableColumn prefWidth="155.0" text="Filmcím" />
+                <TableColumn fx:id="filmcimCol" prefWidth="208.0" text="Filmcím" />
+                <TableColumn fx:id="szarmazasCol" prefWidth="116.0" text="Származás" />
+                  <TableColumn fx:id="mufajCol" minWidth="0.0" prefWidth="120.0" text="Műfaj" />
+                  <TableColumn fx:id="hosszCol" prefWidth="127.0" text="Hossz" />
               </columns>
             </TableView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="-8.0" layoutY="-1.0" prefHeight="400.0" prefWidth="300.0">
+      <AnchorPane layoutX="-8.0" layoutY="-1.0" prefHeight="584.0" prefWidth="215.0">
          <children>
-            <Label layoutX="38.0" layoutY="41.0" prefHeight="17.0" prefWidth="115.0" text="Válassza ki a mozit" />
-            <ComboBox layoutX="38.0" layoutY="71.0" prefWidth="150.0" />
-            <Label layoutX="38.0" layoutY="116.0" prefHeight="17.0" prefWidth="115.0" text="Írja be a filmcímet" />
-            <TextField layoutX="38.0" layoutY="145.0" />
-            <Label layoutX="38.0" layoutY="192.0" prefHeight="17.0" prefWidth="58.0" text="Műfaj" />
-            <CheckBox layoutX="38.0" layoutY="218.0" mnemonicParsing="false" text="thriller" />
-            <CheckBox layoutX="38.0" layoutY="242.0" mnemonicParsing="false" text="fantasy" />
-            <CheckBox layoutX="38.0" layoutY="267.0" mnemonicParsing="false" text="vígjáték" />
-            <Label layoutX="38.0" layoutY="300.0" prefHeight="17.0" prefWidth="76.0" text="Filmhossz" />
-            <RadioButton layoutX="38.0" layoutY="324.0" mnemonicParsing="false" text="kevesebb mint 2 óra" />
-            <RadioButton layoutX="38.0" layoutY="349.0" mnemonicParsing="false" text="több mint 2 óra" />
-            <Button layoutX="221.0" layoutY="354.0" mnemonicParsing="false" text="Keresés" />
+            <Label layoutX="40.0" layoutY="14.0" prefHeight="17.0" prefWidth="115.0" text="Válasszon filmet" />
+            <ComboBox fx:id="movieComBox" layoutX="40.0" layoutY="38.0" prefWidth="150.0" />
+            <Label layoutX="40.0" layoutY="76.0" prefHeight="17.0" prefWidth="177.0" text="Keressen műfaj szerint" />
+            <TextField fx:id="mufajTextField" layoutX="40.0" layoutY="99.0" />
+            <Label layoutX="39.0" layoutY="137.0" prefHeight="17.0" prefWidth="58.0" text="Műfaj" />
+            <CheckBox fx:id="thrillerCheckBox" layoutX="40.0" layoutY="162.0" mnemonicParsing="false" text="thriller" />
+            <CheckBox fx:id="fantasyCheckBox" layoutX="40.0" layoutY="192.0" mnemonicParsing="false" text="fantasy" />
+            <CheckBox fx:id="comedyCheckBox" layoutX="40.0" layoutY="221.0" mnemonicParsing="false" text="vígjáték" />
+            <Label layoutX="40.0" layoutY="255.0" prefHeight="17.0" prefWidth="76.0" text="Filmhossz" />
+            <RadioButton fx:id="lessRadioButton" layoutX="40.0" layoutY="280.0" mnemonicParsing="false" text="kevesebb mint 2 óra" />
+            <RadioButton fx:id="moreRadioButton" layoutX="40.0" layoutY="307.0" mnemonicParsing="false" text="több mint 2 óra" />
+            <Button fx:id="searchRead2Button" layoutX="40.0" layoutY="342.0" mnemonicParsing="false" text="Keresés" />
          </children>
       </AnchorPane>
    </children>

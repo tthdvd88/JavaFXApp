@@ -15,6 +15,7 @@ public class JavaFXApplication extends Application {
         stage.setTitle("JavaFX Applikacio");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {
