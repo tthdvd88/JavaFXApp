@@ -14,15 +14,16 @@ import java.util.logging.Logger;
 
 public class FooldalController {
 
+    //Menügomb hívások
 
     @FXML
     public void onmenu1ButtonClick() {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("szamlainformacio.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
             Stage stage = new Stage();
-            stage.setTitle("Adatbázis applikáció");
+            stage.setTitle("Számlainformáció menüpont");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e){
@@ -36,9 +37,9 @@ public class FooldalController {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("aktualisarak.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
             Stage stage = new Stage();
-            stage.setTitle("Adatbázis applikáció");
+            stage.setTitle("Aktuális árak menüpont");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e){
@@ -51,10 +52,10 @@ public class FooldalController {
     public void onmenu3ButtonClick() {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InventoryApp/database.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("historikusarak.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
             Stage stage = new Stage();
-            stage.setTitle("Adatbázis applikáció");
+            stage.setTitle("Historikus árak menüpont");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e){
@@ -66,10 +67,10 @@ public class FooldalController {
     public void onmenu4ButtonClick() {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InventoryApp/database.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pozicionyitas.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
             Stage stage = new Stage();
-            stage.setTitle("Adatbázis applikáció");
+            stage.setTitle("Pozíció nyitás menüpont");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e){
@@ -81,10 +82,10 @@ public class FooldalController {
     public void onmenu5ButtonClick() {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InventoryApp/database.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("poziciozaras.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
             Stage stage = new Stage();
-            stage.setTitle("Adatbázis applikáció");
+            stage.setTitle("Pozíció zárás menüpont");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e){
@@ -96,10 +97,10 @@ public class FooldalController {
     public void onmenu6ButtonClick() {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InventoryApp/database.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("nyitottpozicio.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
             Stage stage = new Stage();
-            stage.setTitle("Adatbázis applikáció");
+            stage.setTitle("Nyitott pozíció menüpont");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e){

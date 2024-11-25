@@ -13,9 +13,9 @@
          </font></Label>
       <Button fx:id="menu1Button" layoutX="339.0" layoutY="108.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Számla információ" onAction="#onmenu1ButtonClick" />
       <Button fx:id="menu2Button" layoutX="339.0" layoutY="168.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Aktuális árak" onAction="#onmenu2ButtonClick" />
-      <Button fx:id="menu3Button" layoutX="339.0" layoutY="224.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Historikus árak" />
-      <Button fx:id="menu4Button" layoutX="339.0" layoutY="284.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Pozíció nyitás" />
-      <Button fx:id="menu5Button" layoutX="339.0" layoutY="342.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Pozíció zárás" />
-      <Button fx:id="menu6Button" layoutX="339.0" layoutY="398.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Nyitott pozíciók" />
+      <Button fx:id="menu3Button" layoutX="339.0" layoutY="224.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Historikus árak" onAction="#onmenu3ButtonClick" />
+      <Button fx:id="menu4Button" layoutX="339.0" layoutY="284.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Pozíció nyitás" onAction="#onmenu4ButtonClick" />
+      <Button fx:id="menu5Button" layoutX="339.0" layoutY="342.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Pozíció zárás" onAction="#onmenu5ButtonClick"/>
+      <Button fx:id="menu6Button" layoutX="339.0" layoutY="398.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Nyitott pozíciók" onAction="#onmenu6ButtonClick" />
    </children>
 </AnchorPane>

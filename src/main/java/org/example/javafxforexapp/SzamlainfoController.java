@@ -1,5 +1,6 @@
 package org.example.javafxforexapp;
 
+import javafx.collections.ObservableArray;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -12,18 +13,20 @@ import com.oanda.v20.pricing.ClientPrice;
 import com.oanda.v20.pricing.PricingGetRequest;
 import com.oanda.v20.pricing.PricingGetResponse;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.w3c.dom.Text;
 
+import javax.security.auth.callback.Callback;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 public class SzamlainfoController {
-    @FXML
-    private TableView<String> szamlainfoTv;
-    @FXML
-    private TableColumn<?,String> szamlainfoCol;
 
+    @FXML
+    private TextArea szamlainfoTextArea;
 
+    //Lekéri listába az adatok a Forexről és visszaadja Stringben
     public void szamlainfoButtonClick() {
         try{
             Context ctx = new ContextBuilder(Config.URL).setToken(Config.TOKEN).setApplication("PricePolling").build();
@@ -32,9 +35,13 @@ public class SzamlainfoController {
             PricingGetRequest request = new PricingGetRequest(accountId, instruments);
             PricingGetResponse resp = ctx.pricing.get(request);
             for (ClientPrice price : resp.getPrices())
-                szamlainfoCol.setText(price.toString());
+                szamlainfoTextArea.setText(price.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+
+
+
 }

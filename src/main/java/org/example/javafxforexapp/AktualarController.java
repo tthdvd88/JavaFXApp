@@ -21,11 +21,13 @@ public class AktualarController {
     @FXML
     public TextArea aktualarTextArea;
 
+    //Program induláskor a ComboBox felveszi a beállított értékeket
     @FXML
     private void initialize() {
         aktualarComBox.getItems().addAll("EUR_USD","USD_JPY","GBP_USD","USD_CHF");
     }
 
+    //Annak függvényében hogy milyen adat van kiválasztva a ComboBoxban hívja meg a hozzá tartozó metódust
     @FXML
     private void buttonClick() {
         if (aktualarComBox.getValue() == "EUR_USD"){
@@ -39,6 +41,8 @@ public class AktualarController {
         }
     }
 
+
+    //EUR_USD árfolyam lekérdezés
     private void showArfolyam1() {
         try {
             Context ctx = new ContextBuilder(Config.URL).setToken(Config.TOKEN).setApplication("PricePolling").build();
@@ -53,6 +57,7 @@ public class AktualarController {
         }
     }
 
+    //USD_JPY árfolyam lekérdezés
     private void showArfolyam2() {
         try {
             Context ctx = new ContextBuilder(Config.URL).setToken(Config.TOKEN).setApplication("PricePolling").build();
@@ -66,6 +71,8 @@ public class AktualarController {
             e.printStackTrace();
         }
     }
+
+    //GBP_USD árfolyam lekérdezés
     private void showArfolyam3() {
         try {
             Context ctx = new ContextBuilder(Config.URL).setToken(Config.TOKEN).setApplication("PricePolling").build();
@@ -79,6 +86,8 @@ public class AktualarController {
             e.printStackTrace();
         }
     }
+
+    //USD_CHF árfolyam lekérdezés
     private void showArfolyam4() {
         try {
             Context ctx = new ContextBuilder(Config.URL).setToken(Config.TOKEN).setApplication("PricePolling").build();

@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
-            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
-    <children>
-        <Label layoutX="333.0" layoutY="48.0" prefHeight="27.0" prefWidth="134.0" text="Forex Applikáció">
-            <font>
-                <Font size="18.0" />
-            </font></Label>
-        <Button fx:id="menu1Button" layoutX="339.0" layoutY="108.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Számla információ" onAction="#onmenu1ButtonClick" />
-        <Button fx:id="menu2Button" layoutX="339.0" layoutY="168.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Aktuális árak" />
-        <Button fx:id="menu3Button" layoutX="339.0" layoutY="224.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Historikus árak" />
-        <Button fx:id="menu4Button" layoutX="339.0" layoutY="284.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Pozíció nyitás" />
-        <Button fx:id="menu5Button" layoutX="339.0" layoutY="342.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Pozíció zárás" />
-        <Button fx:id="menu6Button" layoutX="339.0" layoutY="398.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Nyitott pozíciók" />
-    </children>
+            xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafxforexapp.HistorikusController">
+   <children>
+      <ComboBox fx:id="devizaComBox" layoutX="48.0" layoutY="44.0" prefWidth="150.0" />
+      <Label layoutX="48.0" layoutY="27.0" text="Válasszon devizát" />
+      <DatePicker fx:id="startDate" layoutX="258.0" layoutY="44.0" />
+      <DatePicker fx:id="endDate" layoutX="449.0" layoutY="44.0" />
+      <AreaChart fx:id="arvaltGrafikon" layoutX="31.0" layoutY="297.0" prefHeight="252.0" prefWidth="748.0">
+        <xAxis>
+          <CategoryAxis fx:id="idoTengely" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="arTengely" side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <Button fx:id="searchButton" layoutX="669.0" layoutY="44.0" mnemonicParsing="false" onAction="#buttonClick" text="Keresés" />
+      <TableView fx:id="arvaltTv" layoutX="34.0" layoutY="107.0" prefHeight="177.0" prefWidth="742.0">
+        <columns>
+            <TableColumn fx:id="kezdodatumCol" prefWidth="133.0" text="Kezdő dátum" />
+            <TableColumn fx:id="vegdatumCol" prefWidth="125.0" text="Végdátum" />
+          <TableColumn fx:id="arvaltCol" prefWidth="483.0" text="Árak változása" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>
