@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="333.0" layoutY="48.0" prefHeight="27.0" prefWidth="134.0" text="Forex Applikáció">
+            <font>
+                <Font size="18.0" />
+            </font></Label>
+        <Button fx:id="menu1Button" layoutX="339.0" layoutY="108.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Számla információ" onAction="#onmenu1ButtonClick" />
+        <Button fx:id="menu2Button" layoutX="339.0" layoutY="168.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Aktuális árak" />
+        <Button fx:id="menu3Button" layoutX="339.0" layoutY="224.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Historikus árak" />
+        <Button fx:id="menu4Button" layoutX="339.0" layoutY="284.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Pozíció nyitás" />
+        <Button fx:id="menu5Button" layoutX="339.0" layoutY="342.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Pozíció zárás" />
+        <Button fx:id="menu6Button" layoutX="339.0" layoutY="398.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Nyitott pozíciók" />
+    </children>
+</AnchorPane>
