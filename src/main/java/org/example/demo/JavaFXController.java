@@ -16,7 +16,7 @@ public class JavaFXController {
     public void onDatabaseButtonClick() {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("database.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InventoryApp/database.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 640, 480);
             Stage stage = new Stage();
             stage.setTitle("Adatbázis applikáció");
