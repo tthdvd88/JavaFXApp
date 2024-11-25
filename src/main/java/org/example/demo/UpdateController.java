@@ -60,7 +60,9 @@ public class UpdateController implements Initializable {
 
     @FXML
     public void getDataButtonOnClick() {
-        showAdottMozi();
+        if(getDataButton != null){
+            showAdottMozi();
+        }
     }
 
     public Connection getConnection(){
@@ -165,7 +167,13 @@ public class UpdateController implements Initializable {
     public void showAdottMozi(){
         ObservableList<Mozi> list = getAdottMozi();
 
-        String mozinev =
+        mozinevCol.setCellValueFactory(new PropertyValueFactory<Mozi, String>("mozinev"));
+        irszamCol.setCellValueFactory(new PropertyValueFactory<Mozi, String>("irszam"));
+        cimCol.setCellValueFactory(new PropertyValueFactory<Mozi, String>("cim"));
+        telefonCol.setCellValueFactory(new PropertyValueFactory<Mozi, String>("telefon"));
+
+        tvUpdate.setItems(list);
+
     }
 
     private void executeQuery(String query) {
@@ -182,9 +190,13 @@ public class UpdateController implements Initializable {
 
     //UPDATE query futtatás a mozi táblán
     public void updateMozi() {
-        String updateQuery = "UPDATE mozi SET" + "`mozinev`=" + moziTextField.getText() + "," + "`irszam`=" + irszamTextField.getText() +
-                "," + "`cim`=" + cimTextField.getText() + "," + "`telefon`=" + telefonszamTextField.getText() + "WHERE moziazon = " + "'" + updateComBox.getValue() + "'";
+        String updateQuery = "UPDATE mozi SET" + "`mozinev`=" + "'" + moziTextField.getText() + "'" + "," + "`irszam`=" + "'" + irszamTextField.getText() + "'" +
+                "," + "`cim`=" + "'" + cimTextField.getText() + "'" + "," + "`telefon`=" + "'" + telefonszamTextField.getText() + "'" + "WHERE moziazon = "  + updateComBox.getValue() ;
         executeQuery(updateQuery);
+        moziTextField.clear();
+        irszamTextField.clear();
+        cimTextField.clear();
+        telefonszamTextField.clear();
         showMozik();
     }
 

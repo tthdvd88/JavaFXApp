@@ -102,6 +102,11 @@ public class WriteController implements Initializable {
         String saveQuery = "INSERT INTO mozi VALUES (" + "'"  + moziIdTextField.getText() + "'"  +  "," + "'" + mozinevTextField.getText() + "'" +
                 "," + "'" + irszamTextField.getText() + "'" + "," + "'" + cimTextField.getText() + "'" + ","+ "'" + telefonTextField.getText() + "'" + ")";
         executeQuery(saveQuery);
+        moziIdTextField.clear();
+        mozinevTextField.clear();
+        irszamTextField.clear();
+        cimTextField.clear();
+        telefonTextField.clear();
         showMozik();
 
 

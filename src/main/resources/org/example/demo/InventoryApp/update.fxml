@@ -26,6 +26,6 @@
             <TableColumn fx:id="telefonCol" prefWidth="124.0" text="Telefon" />
         </columns>
       </TableView>
-      <Button fx:id="getDataButton" layoutX="40.0" layoutY="139.0" mnemonicParsing="false" text="Adatok lekérdezése" onAction="#getDataButtonOnClick" />
+      <Button fx:id="getDataButton" layoutX="40.0" layoutY="139.0" mnemonicParsing="false" text="Szűrés" onAction="#getDataButtonOnClick" />
    </children>
 </AnchorPane>
