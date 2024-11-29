@@ -21,7 +21,7 @@
          <children>
             <Label layoutX="40.0" layoutY="14.0" prefHeight="17.0" prefWidth="115.0" text="Válasszon filmet" />
             <ComboBox fx:id="movieComBox" layoutX="40.0" layoutY="38.0" prefWidth="150.0" />
-            <Label layoutX="40.0" layoutY="76.0" prefHeight="17.0" prefWidth="177.0" text="Keressen műfaj szerint" />
+            <Label layoutX="40.0" layoutY="76.0" prefHeight="17.0" prefWidth="177.0" text="Keressen származás szerint" />
             <TextField fx:id="mufajTextField" layoutX="40.0" layoutY="99.0" />
             <Label layoutX="39.0" layoutY="137.0" prefHeight="17.0" prefWidth="58.0" text="Műfaj" />
             <CheckBox fx:id="thrillerCheckBox" layoutX="40.0" layoutY="162.0" mnemonicParsing="false" text="thriller" />
